@@ -1,7 +1,9 @@
 // // App.js
 
 // import React from 'react';
-// import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+// import './App.css';
+// import Test from './Test';
 
 // const Home = () => (
 //   <div>
@@ -14,6 +16,7 @@
 //   <div>
 //     <h2>About</h2>
 //     <p>This is the about page.</p>
+//     <NavLink to="/about/test">myname</NavLink>
 //   </div>
 // );
 
@@ -24,29 +27,32 @@
 //   </div>
 // );
 
+// const NotFound = () => (
+//   <div>
+//     <h2>404 Not Found</h2>
+//     <p>Sorry, the page you are looking for does not exist.</p>
+//   </div>
+// );
+
 // const App = () => (
 //   <Router>
 //     <div>
-//       <nav>
-//         <ul>
-//           <li>
-//             <Link to="/">Home</Link>
-//           </li>
-//           <li>
-//             <Link to="/about">About</Link>
-//           </li>
-//           <li>
-//             <Link to="/contact">Contact</Link>
-//           </li>
-//         </ul>
-//       </nav>
+//       <div className="style">
+//             <NavLink to="/">Home page</NavLink>
+//             <NavLink to="/about">About</NavLink>
+//             <NavLink to="/contact">Contact</NavLink>
+          
+//       </div>
 
 //       <hr />
 
-//       <Routes> {/* Use Routes component to wrap Route components */}
+//       <Routes>
 //         <Route path="/" element={<Home />} />
 //         <Route path="/about" element={<About />} />
+//         <Route path="/about/test" element={<Test />} />
 //         <Route path="/contact" element={<Contact />} />
+//         {/* Catch-all route for non-existent pages */}
+//         <Route path="*" element={<NotFound />} />
 //       </Routes>
 //     </div>
 //   </Router>

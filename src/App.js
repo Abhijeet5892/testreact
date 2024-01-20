@@ -1,9 +1,10 @@
 // App.js
 
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import './App.css';
 import Test from './Test';
+import User from './User';
 
 const Home = () => (
   <div>
@@ -16,7 +17,7 @@ const About = () => (
   <div>
     <h2>About</h2>
     <p>This is the about page.</p>
-    <NavLink to="/test">myname</NavLink>
+    <NavLink to="/about/test">myname</NavLink>
   </div>
 );
 
@@ -34,28 +35,27 @@ const NotFound = () => (
   </div>
 );
 
-const App = () => (
-  <Router>
-    <div>
+const App = () => {
+  return (
+    <BrowserRouter>
       <div className="style">
-            <NavLink to="/">Home page</NavLink>
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
-          
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
+        <NavLink to="/user">User</NavLink>
       </div>
 
-      <hr />
-
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/about/test" element={<Test />} />
-        <Route path="/contact" element={<Contact />} />
-        {/* Catch-all route for non-existent pages */}
-        <Route path="*" element={<NotFound />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/about/test' element={<Test />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/user/:name' element={<User />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
-    </div>
-  </Router>
-);
+
+    </BrowserRouter>
+  )
+}
 
 export default App;
