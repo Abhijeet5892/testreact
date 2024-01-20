@@ -1,0 +1,35 @@
+/* Props.css */
+.card {
+    display: inline-block;
+    width: 200px;
+    border: 1px solid #3498db;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  img {
+    width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  h2 {
+    margin-top: 12px;
+    color: #ffffff;
+  }
+  
+  p {
+    color: #ecf0f1;
+  }
+  
