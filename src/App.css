@@ -1,0 +1,23 @@
+/* Add this to your existing CSS file or create a new one */
+
+.style {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3498db; /* Change this color to your preference */
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .style a {
+    text-decoration: none;
+    color: #ecf0f1; /* Change this color to your preference */
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .style a:hover {
+    color: #2c3e50; /* Change this color to your preference */
+  }
+  

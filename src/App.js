@@ -1,7 +1,9 @@
 // App.js
 
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import './App.css';
+import Test from './Test';
 
 const Home = () => (
   <div>
@@ -14,6 +16,7 @@ const About = () => (
   <div>
     <h2>About</h2>
     <p>This is the about page.</p>
+    <NavLink to="/test">myname</NavLink>
   </div>
 );
 
@@ -34,25 +37,19 @@ const NotFound = () => (
 const App = () => (
   <Router>
     <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home page</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
+      <div className="style">
+            <NavLink to="/">Home page</NavLink>
+            <NavLink to="/about">About</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
+          
+      </div>
 
       <hr />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/about/test" element={<Test />} />
         <Route path="/contact" element={<Contact />} />
         {/* Catch-all route for non-existent pages */}
         <Route path="*" element={<NotFound />} />
