@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import './App.css';
 import Test from './Test';
 import User from './User';
+import Search from './Search';
 
 const Home = () => (
   <div>
@@ -43,6 +44,7 @@ const App = () => {
         <NavLink to="/about">About</NavLink>
         <NavLink to="/contact">Contact</NavLink>
         <NavLink to="/user">User</NavLink>
+        <NavLink to="/search">Search</NavLink>
       </div>
 
       <Routes>
@@ -50,7 +52,9 @@ const App = () => {
         <Route path='/about' element={<About />} />
         <Route path='/about/test' element={<Test />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/user' element={<User />} />
         <Route path='/user/:name' element={<User />} />
+        <Route path='/search' element={<Search />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
 
