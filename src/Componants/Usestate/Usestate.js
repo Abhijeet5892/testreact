@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const Usestate = () => {
+    const [myname, setMyname] = useState('Abhi');
     const [count, setCount] = useState(0);
 
     const [studunt, setStudent] = useState({
@@ -32,6 +33,12 @@ const Usestate = () => {
             alert('Sorry this is 0 limit')
             setCount(0)
         }
+
+    }
+    const valupdate = () =>{
+        let val = myname;
+
+        (val === 'abhi')? setMyname('Akash'): setMyname('abhi');
 
     }
 
@@ -61,6 +68,10 @@ const Usestate = () => {
 
 
 
+
+
+         <h1>hi {myname}</h1>
+         <button onClick={valupdate}>clike me </button>
 
         </div>
 
